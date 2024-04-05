@@ -23,7 +23,7 @@ This repository contains a collection of projects I have worked on. Each project
   * Technologies Used: Python, libraries: pandas, requests
   * Link: [NewEgg Web Scraper]()
 
-5. ### Data Cleaning (Nashville Housing)
+5. ### Data Cleaning and Normalizing
   * Description: Preform Extract, Transform, Load (ETL) technique on raw housing data to make it more usable for analysis. This project demonstrates basic cleaning and normalizing raw data for further analysis.
   * Technologies Used: SQL, MySQL
   * Link: [Data Cleaning (Nashville Housing)](https://github.com/andresceleste/portfolio_projects/blob/main/data_cleaning_nashville_housing_data.sql)
