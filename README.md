@@ -24,7 +24,7 @@ This repository contains a collection of projects I have worked on. Each project
   * Link: [NewEgg Web Scraper]()
 
 5. ### Data Cleaning and Normalizing
-  * Description: Preform Extract, Transform, Load (ETL) technique on raw housing data to make it more usable for analysis. This project demonstrates basic cleaning and normalizing raw data for further analysis.
+  * Description: Perform Extract, Transform, Load (ETL) technique on raw housing data to make it more usable for analysis. This project demonstrates basic cleaning and normalizing raw data for further analysis.
   * Technologies Used: SQL, MySQL
   * Link: [Data Cleaning (Nashville Housing)](https://github.com/andresceleste/portfolio_projects/blob/main/data_cleaning_nashville_housing_data.sql)
 
@@ -36,7 +36,7 @@ This repository contains a collection of projects I have worked on. Each project
 ## About Me
 Hello! My name is Andres and I'm an experienced and proactive Software Automation Engineer with a strong background in software automation, software testing methodologies, web development, data analysis, and application support. 
 Proficient in software testing processes, automated testing tools and frameworks, and creating test scripts. I'm curious by nature and have a passion for learning new things, especially when it deals with automation. Throughout my
-tech career, I've been blessed with great mentors. I'm here to pay it forward and share some of the things I've picked up along the way. Cheers!
+tech career, I've been blessed with great mentors. I'm here to pay it forward and share some of the things I've picked up along the way.
 
 ## Contact Information
 * [LinkedIn](https://www.linkedin.com/in/andres-celeste-25562912a)
