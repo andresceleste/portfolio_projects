@@ -37,7 +37,7 @@ def sort_files_by_extension(source_dir, target_dir):
 
 
 # Example usage:
-if __name__ == '__main__':
+if __name__ == "__main__":
     source_directory = "/path/to/source/directory"
     target_directory = "/path/to/target/directory"
     sort_files_by_extension(source_directory, target_directory)

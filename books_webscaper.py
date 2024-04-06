@@ -1,6 +1,6 @@
-from bs4 import BeautifulSoup as bs
-import requests
 import pandas as pd
+import requests
+from bs4 import BeautifulSoup as bs
 
 BASE_URL = "http://books.toscrape.com/catalogue/"
 
@@ -28,14 +28,18 @@ def scrape_books(output_file):
         if soup.title.text == "404 Not Found":
             proceed = False
         else:
-            all_books = soup.find_all("li", class_="col-xs-6 col-sm-4 col-md-3 col-lg-3")
+            all_books = soup.find_all(
+                "li", class_="col-xs-6 col-sm-4 col-md-3 col-lg-3"
+            )
 
             for book in all_books:
                 item = {}
                 item["Title"] = book.find("img").attrs["alt"]
                 item["Link"] = BASE_URL + book.find("a").attrs["href"]
                 item["Price"] = book.find("p", class_="price_color").text[1:]
-                item["Stock"] = book.find("p", class_="instock availability").text.strip()
+                item["Stock"] = book.find(
+                    "p", class_="instock availability"
+                ).text.strip()
                 data.append(item)
 
         current_page += 1

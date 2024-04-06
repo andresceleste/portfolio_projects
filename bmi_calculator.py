@@ -1,15 +1,18 @@
 import tkinter as tk
 from tkinter import messagebox
+
 import customtkinter as ct
 
 
 class BMIApp:
     """
     BMI Calculator Application.
-    BMI stands for Body Mass Index, and it is a measure used to estimate whether a person has a healthy body weight for their height.
-    It is calculated by dividing a person's weight in kilograms by the square of their height in meters (BMI = weight / (height^2)).
-    The result of this calculation categorizes individuals into different weight status categories,
-    which are commonly used to assess health risks associated with weight.
+    BMI stands for Body Mass Index, and it is a measure used to estimate whether
+    a person has a healthy body weight for their height. It is calculated by
+    dividing a person's weight in kilograms by the square of their height in
+    meters (BMI = weight / (height^2)). The result of this calculation categorizes
+    individuals into different weight status categories, which are commonly used
+    to assess health risks associated with weight.
 
     Here are the typical BMI categories and their interpretations:
         • BMI below 18.5: Underweight
@@ -17,6 +20,7 @@ class BMIApp:
         • BMI between 25.0 and 29.9: Overweight
         • BMI of 30 or higher: Obesity
     """
+
     def __init__(self, root):
         """Initialize the BMI App."""
         self.root = root
@@ -35,18 +39,26 @@ class BMIApp:
 
     def create_labels(self):
         """Create weight and height labels."""
-        self.weight_label = ct.CTkLabel(self.root, text="Weight", font=FONT_LABEL, text_color="#fff")
+        self.weight_label = ct.CTkLabel(
+            self.root, text="Weight", font=FONT_LABEL, text_color="#fff"
+        )
         self.weight_label.grid(row=1, column=0, padx=20, pady=20, sticky="w")
 
-        self.height_label = ct.CTkLabel(self.root, text="Height", font=FONT_LABEL, text_color="#fff")
+        self.height_label = ct.CTkLabel(
+            self.root, text="Height", font=FONT_LABEL, text_color="#fff"
+        )
         self.height_label.grid(row=2, column=0, padx=20, pady=20, sticky="w")
 
     def create_entries(self):
         """Create weight and height entry fields."""
-        self.weight_entry = ct.CTkEntry(self.root, font=FONT_LABEL, text_color="#fff", bg_color="#000")
+        self.weight_entry = ct.CTkEntry(
+            self.root, font=FONT_LABEL, text_color="#fff", bg_color="#000"
+        )
         self.weight_entry.grid(row=1, column=1, padx=20, pady=20)
 
-        self.height_entry = ct.CTkEntry(self.root, font=FONT_LABEL, text_color="#fff", bg_color="#000")
+        self.height_entry = ct.CTkEntry(
+            self.root, font=FONT_LABEL, text_color="#fff", bg_color="#000"
+        )
         self.height_entry.grid(row=2, column=1, padx=20, pady=20)
 
     def create_comboboxes(self):
@@ -98,13 +110,20 @@ class BMIApp:
 
     def create_result_label(self):
         """Create result label."""
-        self.result_label = ct.CTkLabel(self.root, text="", font=FONT_RESULT, text_color="#fff")
+        self.result_label = ct.CTkLabel(
+            self.root, text="", font=FONT_RESULT, text_color="#fff"
+        )
         self.result_label.grid(row=4, columnspan=3, padx=10, pady=10)
 
     def create_category_label(self):
         """Create category label."""
         self.category_label = ct.CTkLabel(
-            self.root, text="Category:", font=FONT_RESULT, text_color="#fff", width=20, pady=10
+            self.root,
+            text="Category:",
+            font=FONT_RESULT,
+            text_color="#fff",
+            width=20,
+            pady=10,
         )
         self.category_label.grid(row=5, columnspan=3)
         self.category_label.grid_forget()  # Initially hide the label

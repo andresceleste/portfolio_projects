@@ -1,43 +1,43 @@
-from requests import Request, Session
-from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import json
-from dotenv import load_dotenv
 import os
-import pandas as pd
 
+import pandas as pd
+from dotenv import load_dotenv
+from requests import Session
+from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 
 # Set display options for pandas
-pd.set_option('display.width', 400)
-pd.set_option('display.max_row', None)
-pd.set_option('display.max_column', None)
-pd.set_option('display.float_format', '{:.2f}'.format)
+pd.set_option("display.width", 400)
+pd.set_option("display.max_row", None)
+pd.set_option("display.max_column", None)
+pd.set_option("display.float_format", "{:.2f}".format)
 
 
 # Load environment variables from the .env file
 load_dotenv()
 
 # Access the API key from the environment variables
-api_key = os.getenv('COIN_MARKETCAP_API_KEY')
+api_key = os.getenv("COIN_MARKETCAP_API_KEY")
 
 # URL for the CoinMarketCap API to fetch cryptocurrency data
-url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
+url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
 
-# Parameters for the API request (start: starting rank, limit: maximum number of cryptocurrencies to retrieve, convert: currency to convert prices to)
-parameters = {
-    'start': '1',
-    'limit': '5000',
-    'convert': 'USD'
-}
+# Parameters for the API request (start: starting rank, limit: maximum number of
+# cryptocurrencies to retrieve, convert: currency to convert prices to)
+parameters = {"start": "1", "limit": "5000", "convert": "USD"}
 
 # Headers required for the API request, including the API key
 headers = {
-    'Accepts': 'application/json',  # Specify the response format as JSON
-    'X-CMC_PRO_API_KEY': api_key,  # Provide the API key for authentication
+    "Accepts": "application/json",  # Specify the response format as JSON
+    "X-CMC_PRO_API_KEY": api_key,  # Provide the API key for authentication
 }
 
 # Create a session object to maintain connection settings and headers
-session = Session()
-session.headers.update(headers)  # Update the session headers with the provided API key
+try:
+    session = Session()
+    session.headers.update(headers)
+except NameError:
+    print("Error: 'headers' variable is not defined.")
 
 
 def get_crypto_currency_info(output_file):
@@ -62,26 +62,26 @@ def get_crypto_currency_info(output_file):
             cryptocurrency_info = {}
 
             # Extract relevant data fields from the API response and add them to the dictionary
-            cryptocurrency_info['Rank'] = item['cmc_rank']
-            cryptocurrency_info['Name'] = item['name']
-            cryptocurrency_info['Symbol'] = item['symbol']
-            cryptocurrency_info['Price'] = item['quote']['USD']['price']
-            cryptocurrency_info['Market_Cap'] = item['quote']['USD']['market_cap']
-            cryptocurrency_info['Circulating_Supply'] = item['circulating_supply']
+            cryptocurrency_info["Rank"] = item["cmc_rank"]
+            cryptocurrency_info["Name"] = item["name"]
+            cryptocurrency_info["Symbol"] = item["symbol"]
+            cryptocurrency_info["Price"] = item["quote"]["USD"]["price"]
+            cryptocurrency_info["Market_Cap"] = item["quote"]["USD"]["market_cap"]
+            cryptocurrency_info["Circulating_Supply"] = item["circulating_supply"]
 
             # Append the cryptocurrency information dictionary to the list
             cryptocurrency_data.append(cryptocurrency_info)
 
     except (ConnectionError, Timeout, TooManyRedirects) as e:
         # Handle connection-related errors gracefully
-        print(f'Error: {e}')
+        print(f"Error: {e}")
 
     # Create a DataFrame from the parsed cryptocurrency data
     df = pd.DataFrame(cryptocurrency_data)
 
     # Create a CSV file
     df.to_csv(output_file)
-    print(f'Data saved to {output_file}')
+    print(f"Data saved to {output_file}")
 
 
 if __name__ == "__main__":
