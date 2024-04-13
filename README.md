@@ -41,7 +41,7 @@ This repository contains a collection of projects I have worked on. Each project
 8. ### Automatic File Sorter
   * Description: This Python application automatically sorts all files in a specified directory and categorizes them into new folders based on the file's extension.
   * Technologies Used: Python, libraries: os
-  * Link: [Automatic File Sorted](https://github.com/andresceleste/portfolio_projects/blob/main/automatic_file_sorter.py)
+  * Link: [Automatic File Sorter](https://github.com/andresceleste/portfolio_projects/blob/main/automatic_file_sorter.py)
 
 ## About Me
 Hello! My name is Andres and I'm an experienced and proactive Software Automation Engineer with a strong background in software automation, software testing methodologies, web development, data analysis, and application support. 
