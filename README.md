@@ -33,6 +33,11 @@ This repository contains a collection of projects I have worked on. Each project
   * Technologies Used: SQL, MySQL
   * Link: [Exploratory Data Analysis](https://github.com/andresceleste/portfolio_projects/blob/main/eda_covid_19_sql_queries.sql)
 
+7. ### File Backup App
+  * Description: This Python application allows you to create daily backups of a source folder and store them in a destination directory. It automatically creates a new folder for each backup using the current date as the folder name.
+  * Technologies Used: Python, libraries: datetime, os, shutil, time, schedule
+  * Link: [File Backup](https://github.com/andresceleste/portfolio_projects/blob/main/file_backup.py)
+
 ## About Me
 Hello! My name is Andres and I'm an experienced and proactive Software Automation Engineer with a strong background in software automation, software testing methodologies, web development, data analysis, and application support. 
 Proficient in software testing processes, automated testing tools and frameworks, and creating test scripts. I'm curious by nature and have a passion for learning new things, especially when it deals with automation. Throughout my
