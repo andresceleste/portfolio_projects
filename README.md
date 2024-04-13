@@ -38,6 +38,11 @@ This repository contains a collection of projects I have worked on. Each project
   * Technologies Used: Python, libraries: datetime, os, shutil, time, schedule
   * Link: [File Backup](https://github.com/andresceleste/portfolio_projects/blob/main/file_backup.py)
 
+8. ### Automatic File Sorter
+  * Description: This Python application automatically sorts all files in a specified directory and categorizes them into new folders based on the file's extension.
+  * Technologies Used: Python, libraries: os
+  * Link: [Automatic File Sorted](https://github.com/andresceleste/portfolio_projects/blob/main/automatic_file_sorter.py)
+
 ## About Me
 Hello! My name is Andres and I'm an experienced and proactive Software Automation Engineer with a strong background in software automation, software testing methodologies, web development, data analysis, and application support. 
 Proficient in software testing processes, automated testing tools and frameworks, and creating test scripts. I'm curious by nature and have a passion for learning new things, especially when it deals with automation. Throughout my
