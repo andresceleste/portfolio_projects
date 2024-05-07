@@ -11,17 +11,17 @@ This repository contains a collection of projects I have worked on. Each project
 2. ### Coin Marketcap Web Scraper
   * Description: Fetch cryptocurrency information from CoinMarketCap API and save to a CSV file.
   * Technologies Used: Python, libraries: pandas, requests, json, os
-  * Link: [Coin Marketcap Web Scraper]()
+  * Link: [Coin Marketcap Web Scraper](https://github.com/andresceleste/portfolio_projects/blob/main/coin_market_cap_webscraper.py)
 
 3. ### Books Web Scraper
   * Description: Scrape book data from a website and save it to an Excel file.
   * Technologies Used: Python, libraries: pandas, BeautifulSoup, requests
-  * Link: [Books Web Scraper](https://github.com/andresceleste/portfolio_projects/blob/main/coin_market_cap_webscraper.py)
+  * Link: [Books Web Scraper](https://github.com/andresceleste/portfolio_projects/blob/main/books_webscaper.py)
 
 4. ### NewEgg Web Scraper
   * Description: Scrape book data from a website and save it to an Excel file.
   * Technologies Used: Python, libraries: pandas, requests
-  * Link: [NewEgg Web Scraper]()
+  * Link: [NewEgg Web Scraper](https://github.com/andresceleste/portfolio_projects/blob/main/newegg_webscraper.py)
 
 5. ### Data Cleaning and Normalizing
   * Description: Perform Extract, Transform, Load (ETL) technique on raw housing data to make it more usable for analysis. This project demonstrates basic cleaning and normalizing raw data for further analysis.
